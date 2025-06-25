@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
 
 interface Evento {
   id: number;
@@ -13,7 +14,7 @@ interface Evento {
 @Component({
   selector: 'app-eventos',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule],
   templateUrl: './eventos.component.html',
   styleUrls: ['./eventos.component.css']
 })
@@ -32,7 +33,7 @@ export class EventosComponent {
   eventoDetalle: Evento | null = null;
   eventoEditando: Evento | null = null;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.eventoForm = this.fb.group({
       titulo: ['', [Validators.required, Validators.maxLength(40)]],
       fecha: ['', Validators.required],
@@ -93,8 +94,7 @@ export class EventosComponent {
   }
 
   openDetalleModal(evento: Evento) {
-    this.eventoDetalle = evento;
-    this.showDetalleModal = true;
+    this.router.navigate(['/evento', evento.id]);
   }
 
   closeDetalleModal() {

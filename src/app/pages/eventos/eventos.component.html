@@ -67,15 +67,4 @@
       </div>
     </form>
   </div>
-
-  <!-- Modal Detalle Evento -->
-  <div class="modal-backdrop" *ngIf="showDetalleModal" (click)="closeDetalleModal()"></div>
-  <div class="modal-content modal-detalle" *ngIf="showDetalleModal">
-    <h2>{{ eventoDetalle?.titulo }}</h2>
-    <p class="evento-meta">{{ eventoDetalle?.fecha | date:'mediumDate' }} · {{ eventoDetalle?.lugar }}</p>
-    <p>{{ eventoDetalle?.descripcion }}</p>
-    <div class="modal-actions">
-      <button type="button" (click)="closeDetalleModal()">Cerrar</button>
-    </div>
-  </div>
 </div> 

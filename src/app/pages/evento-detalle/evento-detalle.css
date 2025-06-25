@@ -1,0 +1,183 @@
+.evento-detalle-bg {
+  min-height: 100vh;
+  background: #b2d8d8;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.evento-detalle-card {
+  background: #f8f9fa;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(44,62,80,0.10);
+  max-width: 900px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 1rem;
+}
+
+.evento-banner {
+  background: linear-gradient(120deg, #4ca1af 0%, #b2d8d8 100%);
+  height: 180px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  padding: 2rem 2rem 0 2rem;
+}
+
+.evento-icon {
+  font-size: 4rem;
+  color: #fff;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+}
+
+.evento-categoria {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  background: #4ca1af;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+}
+
+.evento-detalle-content {
+  padding: 2rem;
+}
+
+.evento-info-main h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.evento-info-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.evento-info-panel {
+  background: #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem 1.2rem;
+  min-width: 220px;
+  max-width: 260px;
+  flex: 1 1 220px;
+}
+.evento-info-panel h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.evento-info-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.evento-info-panel li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+.evento-info-panel span {
+  margin-right: 0.5rem;
+}
+
+.evento-info-desc {
+  flex: 2 1 350px;
+  padding-left: 1.5rem;
+}
+.evento-info-desc h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.evento-info-desc p {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+.evento-info-desc h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.evento-info-desc textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1.5px solid #b2d8d8;
+  padding: 1rem;
+  font-size: 1rem;
+  background: #f4f7f6;
+  resize: vertical;
+  min-height: 80px;
+  margin-bottom: 1rem;
+}
+
+.evento-detalle-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.btn-volver {
+  background: #fff;
+  color: #2c3e50;
+  border: 1.5px solid #2c3e50;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-volver:hover {
+  background: #2c3e50;
+  color: #fff;
+}
+.btn-inscribirse {
+  background: #4ca1af;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-inscribirse:hover {
+  background: #357e89;
+}
+
+@media (max-width: 900px) {
+  .evento-info-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .evento-info-desc {
+    padding-left: 0;
+  }
+  .evento-detalle-content {
+    padding: 1rem;
+  }
+  .evento-banner {
+    padding: 1.2rem 1.2rem 0 1.2rem;
+    height: 120px;
+  }
+} 

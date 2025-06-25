@@ -1,0 +1,35 @@
+<div class="evento-detalle-bg">
+  <div class="evento-detalle-card">
+    <div class="evento-banner">
+      <div class="evento-icon">{{ evento?.imagen }}</div>
+      <span class="evento-categoria">{{ evento?.categoria }}</span>
+    </div>
+    <div class="evento-detalle-content">
+      <div class="evento-info-main">
+        <h1>{{ evento?.titulo }}</h1>
+        <div class="evento-info-grid">
+          <div class="evento-info-panel">
+            <h3>Detalles del evento</h3>
+            <ul>
+              <li><span>📅</span> <b>Fecha</b><br>{{ evento?.fecha }}</li>
+              <li><span>🕒</span> <b>Hora</b><br>{{ evento?.hora }}</li>
+              <li><span>📍</span> <b>Ubicación</b><br>{{ evento?.lugar }}</li>
+              <li><span>👥</span> <b>Capacidad</b><br>{{ evento?.capacidad }}</li>
+              <li><span>✅</span> <b>Estado</b><br>{{ evento?.estado }}</li>
+            </ul>
+          </div>
+          <div class="evento-info-desc">
+            <h3>Descripción</h3>
+            <p>{{ evento?.descripcion }}</p>
+            <h4>Comentarios</h4>
+            <textarea [(ngModel)]="comentarios" placeholder="Escribe tus comentarios..." rows="5"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="evento-detalle-actions">
+        <button class="btn-volver" (click)="volver()">Volver</button>
+        <button class="btn-inscribirse">Inscribirse</button>
+      </div>
+    </div>
+  </div>
+</div> 

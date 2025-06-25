@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -56,6 +56,8 @@ export class Inicio {
     { numero: '24/7', descripcion: 'Soporte disponible' }
   ];
 
+  constructor(private router: Router) {}
+
   scrollToSection(sectionId: string) {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -64,8 +66,7 @@ export class Inicio {
   }
 
   verEvento(eventoId: number) {
-    console.log('Ver evento:', eventoId);
-    // Aquí se implementaría la navegación al detalle del evento
+    this.router.navigate(['/evento', eventoId]);
   }
 
   explorarCategoria(categoria: string) {
