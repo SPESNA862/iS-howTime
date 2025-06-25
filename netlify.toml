@@ -1,0 +1,16 @@
+[build]
+  command = "ng build --configuration production"
+  publish = "dist/ishowtime/browser"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[dev]
+  command = "npm start"
+  port = 4200
+  publish = "dist/ishowtime" 
