@@ -5,9 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:ishowtime": "node dist/ishowtime/server/server.mjs"
+    "serve:ssr:ishowtime": "node dist/ishowtime/server/server.mjs",
+    "deploy": "ng build --configuration production --base-href=/iS-howTime/ && npx angular-cli-ghpages --dir=dist/ishowtime"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +33,7 @@
     "@types/express": "^4.17.21",
     "@types/jasmine": "~5.1.4",
     "@types/node": "^20.11.19",
+    "angular-cli-ghpages": "^2.0.0",
     "jasmine-core": "~5.1.1",
     "karma": "~6.4.3",
     "karma-chrome-launcher": "~3.2.0",

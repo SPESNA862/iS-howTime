@@ -37,6 +37,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/iS-howTime/",
               "budgets": [
                 {
                   "type": "initial",

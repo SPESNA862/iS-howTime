@@ -62,6 +62,29 @@ En la actualidad, la información sobre eventos está dispersa en múltiples can
 - [🧠 User Personas y Empathy Map](https://www.canva.com/design/DAGlv6bFKIc/0FqnkaxgSnHbNtefU89Jpw/edit)
 - [🗂️ Tablero Trello del Proyecto](https://trello.com/invite/b/68104b35b3955fff8dc72ac7/ATTI1e83ab0206b3d42eb9692eee6f9af04c887AD5A8/showtime)
 
+## 🚀 Deploy en GitHub Pages
+
+### Configuración Automática
+El proyecto está configurado para desplegarse automáticamente en GitHub Pages. Cada vez que hagas push a la rama `main`, se ejecutará automáticamente el workflow de deploy.
+
+### URL de la Aplicación
+Una vez desplegada, la aplicación estará disponible en:
+```
+https://[tu-usuario].github.io/iS-howTime/
+```
+
+### Deploy Manual
+Si necesitas hacer un deploy manual, ejecuta:
+```bash
+npm run deploy
+```
+
+### Configuración en GitHub
+1. Ve a Settings > Pages en tu repositorio
+2. En "Source", selecciona "Deploy from a branch"
+3. Selecciona la rama `gh-pages` y la carpeta `/ (root)`
+4. Guarda la configuración
+
 ## 🚀 Próximos Pasos
 
 - Desarrollo del MVP funcional
